@@ -1,3 +1,10 @@
+# IDE/Editor Files
+/src/shelf/
+/src/workspace.xml
+/src/httpRequests/
+/src/dataSources/
+/src/dataSources.local.xml
+
 # Prerequisites
 *.d
 
