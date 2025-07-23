@@ -2,9 +2,7 @@
 
 ## Project Overview
 
-This project significantly enhances existing retail Point-of-Sale (POS) systems by integrating advanced data structures: **Interval Trees, Bucket Sort, and Treaps**. Developed for `CSC 212 - Data Structures and Algorithms` at the `University of Rhode Island`, our solution aims to revolutionize search efficiency, storage management, and data organization for retail businesses of all sizes.
-
-It provides critical functionalities for large retail store and warehouse managers, offering streamlined processes for **employee time tracking** and **real-time stock monitoring**.
+This project significantly enhances existing retail Point-of-Sale (POS) systems by integrating advanced data structures: **Interval Trees, Bucket Sort, and Treaps**. Developed for `CSC 212 - Data Structures and Algorithms` at the University of Rhode Island, our solution aims to improve search efficiency, storage management, and data organization for retail businesses of all sizes. It provides critical functionalities for large retail store and warehouse managers, offering streamlined processes for **employee time tracking** and **real-time stock monitoring**. We built this project to apply classroom concepts to a real-world use case and deepen our understanding of data structures through hands-on development.
 
 ## Key Features & Data Structure Applications
 
@@ -12,7 +10,7 @@ Our system leverages specific data structures to solve common retail management 
 
 * ### Employee Time Management with Interval Trees
     * **Purpose:** Efficiently manages employee shift records and attendance.
-    * **Functionality:** Allows for quick retrieval of employee presence at specific times, identifies the latest staff on duty (maximum interval value), and accurately calculates total work hours per day. Each Interval Tree represents a single day, optimizing daily operational insights.
+    * **Functionality:** Allows for quick retrieval of employee presence at specific times, identifies the latest staff on duty, and calculates total work hours per day. Each Interval Tree represents a single day, optimizing daily operational insights.
 
 * ### Efficient Stock Data Handling with Bucket Sort
     * **Purpose:** Organizes and processes incoming item stock numbers.
@@ -26,13 +24,13 @@ Our system leverages specific data structures to solve common retail management 
 
 This program serves two primary functions, designed with **large retail and warehouse managers** in mind, but adaptable for smaller businesses:
 
-1.  **Tracking Employee's Weekly Hours:** Monitors individual shifts and total hours worked.
+1.  **Tracking Employees' Weekly Hours:** Monitors individual shifts and total hours worked.
 2.  **Monitoring Stock Numbers:** Provides insights into inventory levels for various items.
 
-Both employees and items are represented as `struct`s to facilitate comprehensive data tracking:
+Employee data is represented using a struct to track names and hours worked, while item stock information is stored and prioritized using a Treap.
 
-* **Employee Struct:** Stores `Name`, `Shift(s)`, and `Total Hours Worked`.
-* **Item Struct:** Stores `Name`, `Gross Profit Per Item`, and `Total Sale Information`.
+* **Employee Struct:** Stores the employee's `Name` and `Total Hours Worked`. Shift start and end times are managed separately using an Interval Tree.
+* **Item Tracking:** Item names and quantities are recorded using a Treap data structure, allowing for fast access to the item with the highest stock level.
 
 ## How to Build & Run
 
@@ -55,19 +53,9 @@ Both employees and items are represented as `struct`s to facilitate comprehensiv
     ./prog
     ```
 
-## Challenges & Learning Outcomes
-
-Developing this project presented unique challenges in integrating disparate data structures to work cohesively within a single application:
-
-* **Challenge:** Designing a robust system to accurately represent and manage dynamic time intervals for employee shifts using Interval Trees, especially when considering overlapping shifts or complex search queries.
-* **Learning:** Gained a deeper understanding of interval tree construction, query optimization, and the practical application of geometric data structures to real-world scheduling problems.
-
-* **Challenge:** Ensuring efficient data flow and accurate prioritization between Bucket Sort (for initial stock organization) and the Treap (for subsequent stock reordering decisions) while maintaining performance for large datasets.
-* **Learning:** Solidified knowledge of sorting algorithm efficiency, the unique properties of Treaps for combining search and priority, and the importance of choosing the right data structure for specific operational needs.
-
 ## Contributors
 
-This project was a collaborative effort by the following team members from the University of Rhode Island:
+This project was a collaborative effort by:
 
 * **Mithilesh Pabba**
 * **Matthew Connors**
