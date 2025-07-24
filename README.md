@@ -32,7 +32,7 @@ Employee data is represented using a struct to track names and hours worked, whi
 * **Employee Struct:** Stores the employee's `Name` and `Total Hours Worked`. Shift start and end times are managed separately using an Interval Tree.
 * **Item Tracking:** Item names and quantities are recorded using a Treap data structure, allowing for fast access to the item with the highest stock level.
 
-## How to Build & Run
+## How to Run
 
 ### Prerequisites
 
